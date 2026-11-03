@@ -1,0 +1,4 @@
+# Legion Go S controller (1a86:e310 xinput / 1a86:e311 dinput): on every
+# enumeration of the MCU control interface (IF3), enable vibration and keep the
+# touchpad in absolute mode. See /etc/legion-go-s/configure.sh.
+ACTION=="add", SUBSYSTEM=="hidraw", ENV{ID_VENDOR_ID}=="1a86", ENV{ID_MODEL_ID}=="e31[01]", ENV{ID_USB_INTERFACE_NUM}=="03", RUN+="/etc/legion-go-s/configure.sh"

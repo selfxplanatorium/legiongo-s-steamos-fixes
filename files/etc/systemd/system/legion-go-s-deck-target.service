@@ -1,0 +1,12 @@
+[Unit]
+Description=Legion Go S: keep InputPlumber on the VHCI Steam Deck target
+After=inputplumber.service
+Wants=inputplumber.service
+
+[Service]
+ExecStart=/etc/legion-go-s/deck-target.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

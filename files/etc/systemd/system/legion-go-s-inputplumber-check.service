@@ -1,0 +1,10 @@
+[Unit]
+Description=Legion Go S: warn when SteamOS ships an InputPlumber newer than the pinned build
+After=inputplumber.service
+
+[Service]
+Type=oneshot
+ExecStart=/etc/legion-go-s/check-inputplumber.sh
+
+[Install]
+WantedBy=multi-user.target
