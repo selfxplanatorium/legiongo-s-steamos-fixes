@@ -12,7 +12,7 @@ out.
 | `/etc/systemd/system/inputplumber.service.d/10-legion-go-s.conf` | `files/etc/...` | Replaces `ExecStart` of `inputplumber.service` with the patched binary |
 | `/etc/legion-go-s/configure.sh` | `files/etc/...` | Controller setup, see [configure.sh](#configuresh) |
 | `/etc/udev/rules.d/99-legion-go-s.rules` | `files/etc/...` | Runs `configure.sh` when the MCU control interface (IF3) of `1a86:e310` or `1a86:e311` appears |
-| `/etc/systemd/system/legion-go-s-resume.service` | `files/etc/...` | Runs `configure.sh --force` after suspend, hibernate, hybrid sleep and suspend-then-hibernate |
+| `/etc/systemd/system/legion-go-s-resume.service` | `files/etc/...` | Runs `configure.sh` after suspend, hibernate, hybrid sleep and suspend-then-hibernate. It does nothing when the controller kept its device instance, so waking doesn't make the motors buzz |
 | `/etc/legion-go-s/deck-target.sh` | `files/etc/...` | Target loop, see [deck-target.sh](#deck-targetsh) |
 | `/etc/systemd/system/legion-go-s-deck-target.service` | `files/etc/...` | Runs `deck-target.sh` and restarts it if it exits |
 | `/etc/legion-go-s/check-inputplumber.sh` | `files/etc/...` | Version check, see [check-inputplumber.sh](#check-inputplumbersh) |

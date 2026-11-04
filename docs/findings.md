@@ -85,8 +85,11 @@ square of the first difference of the recording while rumble was requested:
 
 Each `08 01 01` also runs the motors for about two seconds on its own. An
 early version of the fix resent the command every 60 seconds and caused
-random buzzing, so `configure.sh` now sends it once per controller connection
-and once after resume.
+random buzzing, so `configure.sh` sends it once per controller connection.
+An early resume hook forced it again on every wake and buzzed each time. On
+the test unit the controller keeps its device instance through s2idle
+suspend, so the resume hook now skips it, and udev covers a controller that
+does reconnect.
 
 ## Touchpad: the real data is in the gamepad report
 

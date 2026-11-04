@@ -9,7 +9,7 @@ causes them.
 |---------|-------|---------------------------|
 | Gyro moves less than 1 percent of what it should | InputPlumber 0.78.0, which ships with SteamOS 3.9.5, passes IMU values to Steam without scaling them | Runs InputPlumber 0.83.1, which scales them correctly |
 | Steam ignores gyro, touchpad and rumble | Steam doesn't recognize the virtual controller that SteamOS selects (`deck-uhid`) | Switches InputPlumber to the `deck` virtual controller, which Steam does recognize |
-| No rumble | The controller ships with vibration turned off. Only Lenovo's Windows app turns it on | Sends the enable command every time the controller connects and after resume |
+| No rumble | The controller ships with vibration turned off. Only Lenovo's Windows app turns it on | Sends the enable command once each time the controller connects |
 | Touchpad does nothing | The touchpad's own HID report repeats one fixed frame. The real touch data arrives in the gamepad report, and InputPlumber ignores it there | Adds a small patch to InputPlumber that reads the touchpad from the gamepad report |
 
 ## Status

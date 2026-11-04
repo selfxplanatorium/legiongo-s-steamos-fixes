@@ -16,7 +16,7 @@ filesystem stays enabled.
 | `/etc/systemd/system/inputplumber.service.d/10-legion-go-s.conf` | Makes `inputplumber.service` start the patched binary |
 | `/etc/legion-go-s/configure.sh` | Turns on vibration and keeps the touchpad in absolute mode |
 | `/etc/udev/rules.d/99-legion-go-s.rules` | Runs `configure.sh` when the controller connects |
-| `/etc/systemd/system/legion-go-s-resume.service` | Runs `configure.sh` after suspend or hibernate |
+| `/etc/systemd/system/legion-go-s-resume.service` | Runs `configure.sh` after suspend or hibernate, only if the controller reconnected |
 | `/etc/legion-go-s/deck-target.sh`, `legion-go-s-deck-target.service` | Keeps InputPlumber on the `deck` virtual controller |
 | `/etc/legion-go-s/check-inputplumber.sh`, `legion-go-s-inputplumber-check.service` | Logs a warning at boot when SteamOS ships a newer InputPlumber |
 

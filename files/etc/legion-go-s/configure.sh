@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Legion Go S controller setup that must be re-applied after every controller
-# enumeration (boot, USB reset, firmware flash) and after resume:
+# enumeration (boot, USB reset, firmware flash, or a reconnect after resume):
 #   1. MCU command 08 01 01: enable "vibration notify". The MCU ships with it
 #      off and only Legion Space (Windows) turns it on, so rumble packets are
 #      ACKed but the motors never move.
