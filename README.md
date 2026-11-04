@@ -20,9 +20,7 @@ firmware 0.0.4.3 and touchpad firmware SIPO v12. On that unit:
 - Touchpad movement and clicks work in Steam.
 - The virtual controller reports about 1 g at rest, which is the correct gyro
   and accelerometer scale. Gyro aiming in a game hasn't been checked.
-- The motors run when InputPlumber's force-feedback interface is called, as
-  measured with the internal microphone. Rumble inside a game hasn't been
-  checked.
+- Rumble works in games, including after waking from sleep.
 
 Other models (83N6, 83Q2, 83Q3) use the same controller, but nobody has tested
 them yet. Some units have a touchpad from a different supplier ("Better Life")
